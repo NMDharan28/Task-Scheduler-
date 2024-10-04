@@ -19,7 +19,7 @@ def index():
     return render_template('index.html',todos=all_todos)
 
 
-# @app.post("/login") is a shortcut for @app.route("/login", method='POST') 
+# @app.post("/login") is a shortcut and for @app.route("/login", method='POST') 
 @app.post("/<id>/delete")
 def delete1(id):
     todos.delete_one({"_id":ObjectId(id)})
